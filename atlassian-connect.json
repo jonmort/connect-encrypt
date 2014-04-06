@@ -1,0 +1,53 @@
+{
+     "name": "Encrypt Content",
+     "description": "Encrypts content the browser",
+     "key": "org.jonmort.connect.encrypt",
+     "baseUrl": "http://localhost:8000",
+     "vendor": {
+         "name": "Jon Mort",
+         "url": "http://bitbucket.org/jonmort"
+     },
+     "authentication": {
+         "type": "none"
+     },
+     "scopes": [
+         "READ"
+     ],
+     "version": "1.0",
+     "modules": {
+         "generalPages": [
+             {
+                 "url": "/helloworld.html",
+                 "key": "hello-world",
+                 "name": {
+                     "value": "Greeting"
+                 }
+             }
+         ],
+         "dynamicContentMacros": [
+             {
+                 "key": "encrypt-macro",
+                 "name": {
+                     "value": "Encrypt Macro"
+                 },
+                 "url": "/view-encrypt-macro.html?pageId={page.id}&pageVersion={page.version}&message={message}",
+                 "editor": {
+                     "url": "/edit-encrypt-macro.html",
+                     "editTitle": {
+                         "value": "Encrypt Macro"
+                     },
+                     "insertTitle": {
+                         "value": "Encrypt Macro"
+                     },
+                     "width": "400px",
+                     "height": "300px"
+                 },
+                 "outputType": "inline",
+                 "categories": ["formatting", "external-content"],
+                 "width": "180px",
+                 "height": "32px"
+             }
+
+         ]
+     }
+ }
