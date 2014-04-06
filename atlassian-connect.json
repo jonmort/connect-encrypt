@@ -2,7 +2,7 @@
      "name": "Encrypt Content",
      "description": "Encrypts content the browser",
      "key": "org.jonmort.connect.encrypt",
-     "baseUrl": "http://localhost:8000",
+     "baseUrl": "https://jonmort.github.io/connect-encrypt",
      "vendor": {
          "name": "Jon Mort",
          "url": "http://bitbucket.org/jonmort"
