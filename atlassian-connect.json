@@ -1,6 +1,6 @@
 {
-     "name": "Encrypt Content",
-     "description": "Encrypts content the browser",
+     "name": "Encrypt Content for Confluence",
+     "description": "Encrypt Confluence content in the browser. Keep sensitive information `encrypted, decrypting only in the browser.",
      "key": "org.jonmort.connect.encrypt",
      "baseUrl": "http://localhost:8000",
      "vendor": {
@@ -13,13 +13,21 @@
      "scopes": [
          "READ"
      ],
-     "version": "1.0",
+     "version": "1.0.1",
      "modules": {
          "dynamicContentMacros": [
              {
                  "key": "encrypt-macro",
                  "name": {
-                     "value": "Encrypt Macro"
+                     "value": "Encrypt Content"
+                 },
+                 "description": {
+                     "value": "Encrypts content on a page with AES encryption in the browser before storage on the page, perfect for storing shared credentials. "
+                 },
+                 "icon": {
+                     "width": 72,
+                     "height": 72,
+                     "url": "/images/padlock.png"
                  },
                  "url": "/view-encrypt-macro.html?pageId={page.id}&pageVersion={page.version}&message={message}",
                  "editor": {
@@ -41,8 +49,17 @@
              {
                  "key": "password-encrypt-macro",
                  "name": {
-                     "value": "Password for Encrypt Macro"
+                     "value": "Password for Encrypt Content"
                  },
+                 "description": {
+                     "value": "A common password entry box when there are multiple Encrypt Content macros on the page"
+                 },
+                 "icon": {
+                     "width": 72,
+                     "height": 72,
+                     "url": "/images/padlock.png"
+                 },
+
                  "url": "/view-password-macro.html",
                  "outputType": "inline",
                  "categories": ["formatting", "external-content"],
